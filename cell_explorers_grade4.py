@@ -163,14 +163,14 @@ with st.container(border=True):
                 st.rerun()
 
 if st.session_state.started:
-    st.info("🧫 **Mission:** 10 microscope discoveries. Each correct answer = **1 mark**. Total = **10 marks**.")
+    st.info("🧫 **Mission:** 9 microscope discoveries. Each correct answer = **1 mark**. Total = **9 marks**.")
 
     st.markdown("### 👀 First, compare the two specimens")
     left, right = st.columns(2)
     with left:
-        st.markdown('<div class="lab-card"><h4>🌿 Plant Cell</h4>' + whole_cell_svg("Plant") + '<p class="small-note">Look carefully at its fixed shape, thick outer wall, green chloroplasts, and large vacuole.</p></div>', unsafe_allow_html=True)
+        st.markdown('<div class="lab-card"><h4>🌿 </h4>' + whole_cell_svg("Plant") + '<p class="small-note">Look carefully at its fixed shape, thick outer wall, green chloroplasts, and large vacuole.</p></div>', unsafe_allow_html=True)
     with right:
-        st.markdown('<div class="lab-card"><h4>🐾 Animal Cell</h4>' + whole_cell_svg("Animal") + '<p class="small-note">Look at its flexible boundary. It has no cell wall and no chloroplasts.</p></div>', unsafe_allow_html=True)
+        st.markdown('<div class="lab-card"><h4>🐾 </h4>' + whole_cell_svg("Animal") + '<p class="small-note">Look at its flexible boundary. It has no cell wall and no chloroplasts.</p></div>', unsafe_allow_html=True)
 
     st.markdown("## 🔍 Microscope Discovery Stations")
 
@@ -180,7 +180,7 @@ if st.session_state.started:
         a, b = st.columns([1, 1.35])
         with a:
             st.markdown(organelle_svg(q["organelle"]), unsafe_allow_html=True)
-            st.markdown(f'<div style="text-align:center"><span class="badge">{q["cell"]} cell</span><span class="badge">Focus: {q["organelle"]}</span></div>', unsafe_allow_html=True)
+        
         with b:
             st.markdown(f"**Discovery question:** {q['question']}")
             with st.expander("💡 Open discovery clue"):
