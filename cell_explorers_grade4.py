@@ -159,12 +159,7 @@ with st.container(border=True):
 if st.session_state.started:
     st.info("🧫 **Mission:** 9 microscope discoveries. Each correct answer = **1 mark**. Total = **9 marks**.")
 
-    st.markdown("### 👀 First, compare the two specimens")
-    left, right = st.columns(2)
-    with left:
-        st.markdown('<div class="lab-card"><h4>🌿 </h4>' + whole_cell_svg("Plant") + '<p class="small-note">Look carefully at its fixed shape, thick outer wall, green chloroplasts, and large vacuole.</p></div>', unsafe_allow_html=True)
-    with right:
-        st.markdown('<div class="lab-card"><h4>🐾 </h4>' + whole_cell_svg("Animal") + '<p class="small-note">Look at its flexible boundary. It has no cell wall and no chloroplasts.</p></div>', unsafe_allow_html=True)
+    
 
     st.markdown("## 🔍 Microscope Discovery Stations")
 
@@ -177,8 +172,7 @@ if st.session_state.started:
         
         with b:
             st.markdown(f"**Discovery question:** {q['question']}")
-            with st.expander("💡 Open discovery clue"):
-                st.write("🔎 " + q["hint"])
+            
             answers[i] = st.radio(f"Choose one answer for Station {i}:", q["options"], index=None, key=f"q_{i}", disabled=st.session_state.submitted)
             if st.session_state.submitted:
                 if answers[i] == q["answer"]:
