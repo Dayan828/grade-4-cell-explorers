@@ -37,14 +37,8 @@ QUESTIONS = [
         "hint": "It fills much of the inside of the cell and surrounds the organelles.",
         "fact": "Cytoplasm is the jelly-like material inside the cell where organelles are found."
     },
-    {
-        "organelle": "Mitochondrion", "cell": "Both",
-        "question": "This bean-shaped organelle has folds inside. What is its main job?",
-        "options": ["Releases energy from food for the cell", "Controls what enters the cell", "Makes the plant cell rigid", "Stores genetic information"],
-        "answer": "Releases energy from food for the cell",
-        "hint": "It is often called the powerhouse of the cell.",
-        "fact": "Mitochondria release usable energy from food."
-    },
+    
+    
     {
         "organelle": "Vacuole", "cell": "Plant",
         "question": "In this plant cell, you see a large sac-like space. What is an important job of the vacuole?",
